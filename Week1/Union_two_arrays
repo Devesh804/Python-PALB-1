@@ -19,3 +19,17 @@ b = list(map(int, input("Enter second array elements: ").split()))
 sol = Solution()
 result = sol.findUnion(a,b)
 print(result)
+
+
+
+# for GFG:-
+# class Solution:
+#     def findUnion(self, a, b):
+#         s = set()
+        
+#         for x in a:
+#             s.add(x)
+#         for x in b:
+#             s.add(x)
+            
+#         return sorted(s)
