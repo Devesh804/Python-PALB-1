@@ -1,23 +1,3 @@
-# class Solution:    
-#     def findUnion(self, a, b):
-#         arr=[]
-#         for i in range(len(a)):
-#             for j in range(len(b)):
-#                 for k in arr:
-#                     if a[i]==b[j] and a[i]!=k:
-#                         arr.append(a[i])
-                    
-# a = list(map(int, input("Enter first array elements: ").split()))
-# b = list(map(int, input("Enter second array elements: ").split()))
-
-# sol = Solution()
-# result = sol.findUnion(a,b)
-# print(result)
-# solobj = Solution()
-# result = solobj.kthSmallest(arr, k)
-# print(f"The {k}th smallest element is: {result}")
-
-
 
 class Solution:    
     def findUnion(self, a, b):
