@@ -1,0 +1,45 @@
+class Solution:
+    def minJumps(self, arr):
+        n = len(arr)
+
+        if n == 1:
+            return 0
+
+        if arr[0] == 0:
+            return -1
+        
+        maxReach = arr[0]   # farthest index reachable
+        steps = arr[0]      # steps remaining in current jump
+        jumps = 1            # start with first jump
+
+        for i in range(1, n):
+            # If we reached the end
+            if i == n - 1:
+                return jumps
+            
+            # Update maxReach
+            maxReach = max(maxReach, i + arr[i])
+            
+            steps -= 1
+            
+            # If no more steps left
+            if steps == 0:
+                jumps += 1
+                
+                # If cannot move further
+                if i >= maxReach:
+                    return -1
+                
+                # Refill steps
+                steps = maxReach - i
+
+        return -1
+
+arr = list(map(int, input("Enter array elements:").split()))
+
+#creating a object
+obj2 = Solution()
+
+#storing object with argumnents in variabel
+result2 = obj2.minJumps(arr)
+print(result2)
