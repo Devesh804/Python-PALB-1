@@ -1,0 +1,18 @@
+from collections import Counter
+
+class Solution:
+    #Function to check if b is a subset of a.
+    def isSubset(self, a, b):
+        ca = Counter(a)
+        cb = Counter(b)
+
+        for x in cb:
+            if cb[x] > ca[x]:
+                return False
+        return True
+a = list(map(int, input("Enter first array Elements:").split()))
+b = list(map(int, input("Enter second array elements:").split()))
+
+obj=Solution()
+result=obj.isSubset(a,b)
+print(result)
